@@ -1,0 +1,24 @@
+alfavit = 'ABCDEFGHJKLMNOPQRSTUVWXYZАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЄЮЯ123456789'
+message = input("Enter a message to code: ").upper()
+n=1
+result = ''
+if message == "":
+    for i in message:
+        string = alfavit.find(i)
+        string_str = string + n
+    for i in alfavit:
+        result += alfavit[string_str]
+    else:
+        result += i
+else:
+    print(result)
+message = input("Enter a message to uncode: ").upper()
+if message == "":
+    for i in message:
+        string = alfavit.find(i)
+        string_str = string - n
+    for i in alfavit:
+        result += alfavit[string_str]
+    else:
+        result += i
+else:
