@@ -22,3 +22,23 @@ if message == " ":
         result += i
 else:
     print(result)
+
+
+alfavit = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZЯ' \
+          'АБВГДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯАБВГДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ' \
+          '1234567890*/'
+key = int(1)
+while True:
+    message = input("Повідомлення для шифрування: ").upper()
+    resolt = ''
+
+    for i in message:
+        mesto = alfavit.find(i)
+        new_mesto = mesto + key
+        if i in alfavit:
+            resolt += alfavit[new_mesto]
+        else:
+            resolt += i
+
+
+    print(resolt.lower())
